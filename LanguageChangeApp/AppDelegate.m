@@ -2,8 +2,8 @@
 //  AppDelegate.m
 //  LanguageChangeApp
 //
-//  Created by Dev1 on 5/28/14.
-//  Copyright (c) 2014 Home. All rights reserved.
+//  Created by  Lena Brusilovski on 5/28/14.
+//  Copyright (c) 2014  Lena Brusilovski. All rights reserved.
 //
 
 #import "AppDelegate.h"
