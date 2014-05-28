@@ -43,3 +43,7 @@ then in the view controller that allows changing the language you put:
         [Language setLanguage:newLocale]; <-- just set the language. A notification to your app's delegate will be sent if the language has changed
            
        }
+       
+       
+       
+       of course you would also need to add localizations to your project

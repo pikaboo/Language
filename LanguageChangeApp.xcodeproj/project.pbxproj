@@ -25,6 +25,9 @@
 		5A38347D1935C7FA00061F02 /* Prefs.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A38347C1935C7FA00061F02 /* Prefs.m */; };
 		5A38348B1935CBC900061F02 /* testNib.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A38348D1935CBC900061F02 /* testNib.xib */; };
 		5A3834A21935D4C300061F02 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5A3834A41935D4C300061F02 /* Localizable.strings */; };
+		5A61C2941935DEBF003B3A64 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 5A61C2921935DEBF003B3A64 /* LICENSE */; };
+		5A61C2951935DEBF003B3A64 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5A61C2931935DEBF003B3A64 /* README.md */; };
+		5A61C2971935DF1D003B3A64 /* Screenshot 2014-05-28 12.05.31.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A61C2961935DF1D003B3A64 /* Screenshot 2014-05-28 12.05.31.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,9 @@
 		5A3834A61935D4C600061F02 /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5A3834A91935D70300061F02 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5A3834AC1935D75200061F02 /* ar */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ar; path = ar.lproj/testNib.xib; sourceTree = "<group>"; };
+		5A61C2921935DEBF003B3A64 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
+		5A61C2931935DEBF003B3A64 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = SOURCE_ROOT; };
+		5A61C2961935DF1D003B3A64 /* Screenshot 2014-05-28 12.05.31.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screenshot 2014-05-28 12.05.31.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +152,9 @@
 		5A3834491935C6BD00061F02 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5A61C2961935DF1D003B3A64 /* Screenshot 2014-05-28 12.05.31.png */,
+				5A61C2921935DEBF003B3A64 /* LICENSE */,
+				5A61C2931935DEBF003B3A64 /* README.md */,
 				5A38344A1935C6BD00061F02 /* LanguageChangeApp-Info.plist */,
 				5A38344B1935C6BD00061F02 /* InfoPlist.strings */,
 				5A38344E1935C6BD00061F02 /* main.m */,
@@ -264,11 +273,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A61C2941935DEBF003B3A64 /* LICENSE in Resources */,
 				5A3834A21935D4C300061F02 /* Localizable.strings in Resources */,
 				5A38345B1935C6BD00061F02 /* Images.xcassets in Resources */,
+				5A61C2951935DEBF003B3A64 /* README.md in Resources */,
 				5A38348B1935CBC900061F02 /* testNib.xib in Resources */,
 				5A38344D1935C6BD00061F02 /* InfoPlist.strings in Resources */,
 				5A3834561935C6BD00061F02 /* Main.storyboard in Resources */,
+				5A61C2971935DF1D003B3A64 /* Screenshot 2014-05-28 12.05.31.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,6 +532,7 @@
 				5A3834731935C6BD00061F02 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5A3834741935C6BD00061F02 /* Build configuration list for PBXNativeTarget "LanguageChangeAppTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +541,7 @@
 				5A3834761935C6BD00061F02 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
