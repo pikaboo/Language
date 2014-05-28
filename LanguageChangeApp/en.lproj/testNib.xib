@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="139"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am a english nib loaded from file" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iaH-Oe-WOB">
+                    <rect key="frame" x="25" y="20" width="275" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGV-ON-lmf">
+                    <rect key="frame" x="46" y="55" width="77" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button Left">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FzR-Tp-HwB">
+                    <rect key="frame" x="159" y="55" width="105" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button Right">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="FzR-Tp-HwB" firstAttribute="top" secondItem="iaH-Oe-WOB" secondAttribute="bottom" constant="14" id="32j-7j-dCa"/>
+                <constraint firstItem="iaH-Oe-WOB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="3hR-5O-8S1"/>
+                <constraint firstAttribute="right" secondItem="iaH-Oe-WOB" secondAttribute="right" constant="20" id="3ip-1t-EBe"/>
+                <constraint firstAttribute="bottom" secondItem="TGV-ON-lmf" secondAttribute="bottom" constant="54" id="6gi-MA-qij"/>
+                <constraint firstItem="TGV-ON-lmf" firstAttribute="top" secondItem="iaH-Oe-WOB" secondAttribute="bottom" constant="14" id="A7R-Qy-9sT"/>
+                <constraint firstItem="FzR-Tp-HwB" firstAttribute="left" secondItem="TGV-ON-lmf" secondAttribute="right" constant="36" id="AX5-2e-mtA"/>
+                <constraint firstAttribute="bottom" secondItem="FzR-Tp-HwB" secondAttribute="bottom" constant="54" id="dMO-VI-Bu7"/>
+                <constraint firstItem="FzR-Tp-HwB" firstAttribute="left" secondItem="TGV-ON-lmf" secondAttribute="right" constant="36" id="drb-ao-8WY"/>
+                <constraint firstItem="TGV-ON-lmf" firstAttribute="left" secondItem="iN0-l3-epB" secondAttribute="left" constant="46" id="hHn-EE-nMT"/>
+                <constraint firstItem="FzR-Tp-HwB" firstAttribute="top" secondItem="iaH-Oe-WOB" secondAttribute="bottom" constant="14" id="jhS-nS-5Xl"/>
+                <constraint firstItem="iaH-Oe-WOB" firstAttribute="left" secondItem="iN0-l3-epB" secondAttribute="left" constant="25" id="pLj-ca-dHH"/>
+                <constraint firstAttribute="trailing" secondItem="FzR-Tp-HwB" secondAttribute="trailing" constant="56" id="pl4-QK-8fA"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+</document>
