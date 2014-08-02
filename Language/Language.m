@@ -17,7 +17,7 @@
 static Language *currentLanguage;
 
 +(void)setLanguage:(NSString *)locale{
-    [[NSUserDefaults standardUserDefaults]setObject:[Language preferedLocalization] forKey:@"AppleLanguages"];
+    [[NSUserDefaults standardUserDefaults]setObject:@[[Language preferedLocalization]] forKey:@"AppleLanguages"];
     [[NSUserDefaults standardUserDefaults]synchronize];
     BOOL changed =self.currentLanguage && ![locale isEqualToString:self.currentLanguage.locale];
     if([locale isEqualToString:[[Language ENGLISH]locale]]){
