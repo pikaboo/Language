@@ -6,36 +6,36 @@
 //  Copyright (c) 2014 Lena Brusilovski. All rights reserved.
 //
 
-#import "Language.h"
-@interface Language()
+#import "LBLanguage.h"
+@interface LBLanguage()
 @property (nonatomic,strong)NSBundle *resourceBundle;
 @property (nonatomic,strong)NSBundle *base;
 @end
-@implementation Language
+@implementation LBLanguage
 @synthesize resourceBundle;
 
-static Language *currentLanguage;
+static LBLanguage *currentLanguage;
 
 +(void)setLanguage:(NSString *)locale{
-    [[NSUserDefaults standardUserDefaults]setObject:@[[Language preferedLocalization]] forKey:@"AppleLanguages"];
+    [[NSUserDefaults standardUserDefaults]setObject:@[[LBLanguage preferedLocalization]] forKey:@"AppleLanguages"];
     [[NSUserDefaults standardUserDefaults]synchronize];
     BOOL changed =self.currentLanguage && ![locale isEqualToString:self.currentLanguage.locale];
-    if([locale isEqualToString:[[Language ENGLISH]locale]]){
-        currentLanguage = [Language ENGLISH];
+    if([locale isEqualToString:[[LBLanguage ENGLISH]locale]]){
+        currentLanguage = [LBLanguage ENGLISH];
     }else
-        if([locale isEqualToString:[[Language ARABIC]locale]]){
-            currentLanguage = [Language ARABIC];
+        if([locale isEqualToString:[[LBLanguage ARABIC]locale]]){
+            currentLanguage = [LBLanguage ARABIC];
         }else
-            if([locale isEqualToString:[[Language HEBREW]locale]]){
-                currentLanguage =[Language HEBREW];
+            if([locale isEqualToString:[[LBLanguage HEBREW]locale]]){
+                currentLanguage =[LBLanguage HEBREW];
             }else
-                if([locale isEqualToString:[[Language ITALIAN]locale]]){
-                    currentLanguage = [Language ITALIAN];
+                if([locale isEqualToString:[[LBLanguage ITALIAN]locale]]){
+                    currentLanguage = [LBLanguage ITALIAN];
                 }else
-                    if([locale isEqualToString:[[Language RUSSIAN]locale]]){
-                        currentLanguage = [Language RUSSIAN];
+                    if([locale isEqualToString:[[LBLanguage RUSSIAN]locale]]){
+                        currentLanguage = [LBLanguage RUSSIAN];
                     }else {
-                        currentLanguage = [Language ENGLISH];
+                        currentLanguage = [LBLanguage ENGLISH];
                     }
     if(changed){
         [[NSNotificationCenter defaultCenter]postNotificationName:NotificationLanguageChanged object:currentLanguage];
@@ -46,7 +46,7 @@ static Language *currentLanguage;
     return  self.languageDirection == NSLocaleLanguageDirectionRightToLeft;
 }
 
-+(Language *)currentLanguage{
++(LBLanguage *)currentLanguage{
     return currentLanguage;
 }
 -(instancetype)initWithLocale:(NSString *)locale{
@@ -87,15 +87,15 @@ static Language *currentLanguage;
 -(NSArray *)loadNibNamed:(NSString *)name owner:(id)owner options:(NSDictionary *)options{
     if(self.languageDirection == NSLocaleLanguageDirectionRightToLeft){
         //look for localized resource
-        if([[[Language currentLanguage]bundle]pathForResource:name ofType:@"nib"]!=nil){
+        if([[[LBLanguage currentLanguage]bundle]pathForResource:name ofType:@"nib"]!=nil){
             NSLog(@"requested resource found  file:%@ exists, loading ",name);
-            return [[[Language currentLanguage]bundle]loadNibNamed:name owner:owner options:options];
+            return [[[LBLanguage currentLanguage]bundle]loadNibNamed:name owner:owner options:options];
         }
         //asume there is an RTL layout in hebrew layouts
-        if([[[Language HEBREW]bundle]pathForResource:name ofType:@"nib"] != nil)
+        if([[[LBLanguage HEBREW]bundle]pathForResource:name ofType:@"nib"] != nil)
         {
             NSLog(@"rtl orientation file:%@ exists, loading ",name);
-            return [[[Language HEBREW]bundle]loadNibNamed:name owner:owner options:options];
+            return [[[LBLanguage HEBREW]bundle]loadNibNamed:name owner:owner options:options];
         }
     }
     //look for base resource
@@ -108,16 +108,16 @@ static Language *currentLanguage;
 -(UINib *)nibWithNibName:(NSString *)name{
     if(self.languageDirection == NSLocaleLanguageDirectionRightToLeft){
         //look for localized resource
-        if([[[Language currentLanguage]bundle]pathForResource:name ofType:@"nib"]!=nil){
+        if([[[LBLanguage currentLanguage]bundle]pathForResource:name ofType:@"nib"]!=nil){
             NSLog(@"requested resource found  file:%@ exists, loading ",name);
-            return  [UINib nibWithNibName:name bundle:[[Language currentLanguage]bundle]];
+            return  [UINib nibWithNibName:name bundle:[[LBLanguage currentLanguage]bundle]];
         }
         //assume there is an RTL layout in hebrew layouts
-        if([[[Language HEBREW]bundle]pathForResource:name ofType:@"nib"] != nil)
+        if([[[LBLanguage HEBREW]bundle]pathForResource:name ofType:@"nib"] != nil)
         {
             NSLog(@"rtl orientation file:%@ exists, loading ",name);
             
-            return  [UINib nibWithNibName:name bundle:[[Language HEBREW]bundle]];
+            return  [UINib nibWithNibName:name bundle:[[LBLanguage HEBREW]bundle]];
         }
     }
     //look for base layout
@@ -127,46 +127,46 @@ static Language *currentLanguage;
     //load default layout
     return [UINib nibWithNibName:name bundle:[NSBundle mainBundle]];
 }
-+(Language *)ENGLISH{
-    static Language *lang = nil;
++(LBLanguage *)ENGLISH{
+    static LBLanguage *lang = nil;
     if(!lang){
-        lang = [[Language alloc]initWithLocale:@"en"];
+        lang = [[LBLanguage alloc]initWithLocale:@"en"];
     }
     return lang;
 }
-+(Language *)HEBREW{
-    static Language *lang = nil;
++(LBLanguage *)HEBREW{
+    static LBLanguage *lang = nil;
     if(!lang){
-        lang = [[Language alloc]initWithLocale:@"he"];
+        lang = [[LBLanguage alloc]initWithLocale:@"he"];
     }
     return lang;
 }
-+(Language *)ARABIC{
-    static Language *lang = nil;
++(LBLanguage *)ARABIC{
+    static LBLanguage *lang = nil;
     if(!lang){
-        lang = [[Language alloc]initWithLocale:@"ar"];
+        lang = [[LBLanguage alloc]initWithLocale:@"ar"];
     }
     return lang;
 }
-+(Language *)ITALIAN{
-    static Language *lang = nil;
++(LBLanguage *)ITALIAN{
+    static LBLanguage *lang = nil;
     if(!lang){
-        lang = [[Language alloc]initWithLocale:@"it"];
+        lang = [[LBLanguage alloc]initWithLocale:@"it"];
     }
     return lang;
 }
-+(Language *)RUSSIAN{
-    static Language *lang = nil;
++(LBLanguage *)RUSSIAN{
+    static LBLanguage *lang = nil;
     if(!lang){
-        lang = [[Language alloc]initWithLocale:@"ru"];
+        lang = [[LBLanguage alloc]initWithLocale:@"ru"];
     }
     return lang;
 }
 
-+(Language *)SPANISH{
-    static Language *lang = nil;
++(LBLanguage *)SPANISH{
+    static LBLanguage *lang = nil;
     if(!lang){
-        lang = [[Language alloc]initWithLocale:@"es"];
+        lang = [[LBLanguage alloc]initWithLocale:@"es"];
     }
     return lang;
 }

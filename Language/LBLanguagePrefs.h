@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #define kLanguage @"language"
-@interface Prefs : NSObject
+@interface LBLanguagePrefs : NSObject
 
 - (void)saveLanguage:(NSString*)language;
 - (NSString*)userLanguage;

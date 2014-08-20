@@ -6,9 +6,9 @@
 //  Copyright (c) 2014  Lena Brusilovski. All rights reserved.
 //
 
-#import "Prefs.h"
+#import "LBLanguagePrefs.h"
 
-@implementation Prefs
+@implementation LBLanguagePrefs
 
 - (void)saveLanguage:(NSString*)language
 {

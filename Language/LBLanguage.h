@@ -12,7 +12,7 @@
 #define TextAlignment [[Language currentLanguage]textAlignment]
 
 #define NotificationLanguageChanged @"languageChanged"
-@interface Language : NSObject
+@interface LBLanguage : NSObject
 
 
 
@@ -26,13 +26,13 @@
 -(UINib *)nibWithNibName:(NSString *)name;
 -(NSString *)getString:(const NSString *)key;
 -(BOOL)isRTL;
-+(Language *)ENGLISH;
-+(Language *)HEBREW;
-+(Language *)RUSSIAN;
-+(Language *)ARABIC;
-+(Language *)ITALIAN;
-+(Language *)SPANISH;
++(LBLanguage *)ENGLISH;
++(LBLanguage *)HEBREW;
++(LBLanguage *)RUSSIAN;
++(LBLanguage *)ARABIC;
++(LBLanguage *)ITALIAN;
++(LBLanguage *)SPANISH;
 
 +(void)setLanguage:(NSString *)locale;
-+(Language *)currentLanguage;
++(LBLanguage *)currentLanguage;
 @end

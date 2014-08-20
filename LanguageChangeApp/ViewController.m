@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "Language.h"
+#import "LBLanguage.h"
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *label1;
 @property (weak, nonatomic) IBOutlet UILabel *label2;
@@ -29,10 +29,10 @@
     [super viewWillAppear:animated];
     
     NSString *currentLanguage = [NSString stringWithFormat:@"Current language is :%@, isRTL?: %@ ,bundlePath:%@"
-                                 ,[Language currentLanguage].locale,@([[Language currentLanguage]isRTL]),[[Language currentLanguage].bundle bundlePath]];
+                                 ,[LBLanguage currentLanguage].locale,@([[LBLanguage currentLanguage]isRTL]),[[LBLanguage currentLanguage].bundle bundlePath]];
     
     [self.label3 setText:currentLanguage];
-    NSArray *topViews = [[Language currentLanguage]loadNibNamed:@"testNib" owner:nil options:nil];
+    NSArray *topViews = [[LBLanguage currentLanguage]loadNibNamed:@"testNib" owner:nil options:nil];
     UIView *v = topViews[0];
     v.frame = self.stamView.bounds;
     [self.stamView addSubview:v];
@@ -41,11 +41,11 @@
     [self.segmentedControl setTitle:@"ar" forSegmentAtIndex:2];
     [self.segmentedControl setTitle:@"ru" forSegmentAtIndex:3];
     
-    NSString *locale  =[Language currentLanguage].locale;
+    NSString *locale  =[LBLanguage currentLanguage].locale;
     [self.segmentedControl setSelectedSegmentIndex:[@[@"base",@"he",@"ar",@"ru"] indexOfObject:locale]];
     
     [self.label1 setText:@"loading string for key:clearLocation"];
-    NSString *clearLocation =[[Language currentLanguage] getString:@"clearLocation"];
+    NSString *clearLocation =[[LBLanguage currentLanguage] getString:@"clearLocation"];
     [self.label2 setText:clearLocation];
     
     
@@ -55,7 +55,7 @@
     
     NSInteger index = self.segmentedControl.selectedSegmentIndex;
     NSString *newLocale = [@[@"base",@"he",@"ar",@"ru"] objectAtIndex:index];
-    [Language setLanguage:newLocale];
+    [LBLanguage setLanguage:newLocale];
     
 }
 - (void)didReceiveMemoryWarning

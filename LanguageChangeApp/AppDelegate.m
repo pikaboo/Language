@@ -7,18 +7,18 @@
 //
 
 #import "AppDelegate.h"
-#import "Language.h"
-#import "Prefs.h"
+#import "LBLanguage.h"
+#import "LBLanguagePrefs.h"
 @interface AppDelegate()
-@property (nonatomic,strong)Prefs *prefs;
+@property (nonatomic,strong)LBLanguagePrefs *prefs;
 @end
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    _prefs = [[Prefs alloc]init];
-      [Language setLanguage:[_prefs userLanguage]];
+    _prefs = [[LBLanguagePrefs alloc]init];
+      [LBLanguage setLanguage:[_prefs userLanguage]];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(changeLanguage:) name:NotificationLanguageChanged  object:nil];
     return YES;
 }
@@ -53,7 +53,7 @@
 
 
 -(void)changeLanguage:(NSNotification *)note{
-    Language *lang  = [note object];
+    LBLanguage *lang  = [note object];
     [self.prefs saveLanguage:lang.locale];
     UIViewController *currentScreen =[_window.rootViewController.storyboard instantiateViewControllerWithIdentifier:@"someidentifier"];
 //    [currentScreen setTheNeededState];
