@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "LBLanguage.h"
-#import "LBLanguagePrefs.h"
 @interface AppDelegate()
 @property (nonatomic,strong)LBLanguagePrefs *prefs;
 @end

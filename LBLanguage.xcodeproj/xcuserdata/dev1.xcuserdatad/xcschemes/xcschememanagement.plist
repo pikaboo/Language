@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Framework.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>LBLanguage.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>LanguageChangeApp.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +28,21 @@
 			<true/>
 		</dict>
 		<key>5A38345F1935C6BD00061F02</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5AD11A3219A4A454009ADEFF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5AD11A3F19A4A454009ADEFF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5AD11A5919A4A530009ADEFF</key>
 		<dict>
 			<key>primary</key>
 			<true/>

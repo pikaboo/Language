@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "LBLanguagePrefs.h"
 
 #define TextAlignment [[Language currentLanguage]textAlignment]
 

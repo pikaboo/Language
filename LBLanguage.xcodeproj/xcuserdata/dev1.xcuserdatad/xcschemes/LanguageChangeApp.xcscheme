@@ -17,7 +17,7 @@
                BlueprintIdentifier = "5A38343E1935C6BD00061F02"
                BuildableName = "LanguageChangeApp.app"
                BlueprintName = "LanguageChangeApp"
-               ReferencedContainer = "container:LanguageChangeApp.xcodeproj">
+               ReferencedContainer = "container:LBLanguage.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,17 @@
                BlueprintIdentifier = "5A38345F1935C6BD00061F02"
                BuildableName = "LanguageChangeAppTests.xctest"
                BlueprintName = "LanguageChangeAppTests"
-               ReferencedContainer = "container:LanguageChangeApp.xcodeproj">
+               ReferencedContainer = "container:LBLanguage.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "5AD11A3F19A4A454009ADEFF"
+               BuildableName = "LBLanguageTests.xctest"
+               BlueprintName = "LBLanguageTests"
+               ReferencedContainer = "container:LBLanguage.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -45,7 +55,7 @@
             BlueprintIdentifier = "5A38343E1935C6BD00061F02"
             BuildableName = "LanguageChangeApp.app"
             BlueprintName = "LanguageChangeApp"
-            ReferencedContainer = "container:LanguageChangeApp.xcodeproj">
+            ReferencedContainer = "container:LBLanguage.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -64,7 +74,7 @@
             BlueprintIdentifier = "5A38343E1935C6BD00061F02"
             BuildableName = "LanguageChangeApp.app"
             BlueprintName = "LanguageChangeApp"
-            ReferencedContainer = "container:LanguageChangeApp.xcodeproj">
+            ReferencedContainer = "container:LBLanguage.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -82,7 +92,7 @@
             BlueprintIdentifier = "5A38343E1935C6BD00061F02"
             BuildableName = "LanguageChangeApp.app"
             BlueprintName = "LanguageChangeApp"
-            ReferencedContainer = "container:LanguageChangeApp.xcodeproj">
+            ReferencedContainer = "container:LBLanguage.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
