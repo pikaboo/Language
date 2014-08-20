@@ -10,6 +10,13 @@
 #define kLanguage @"language"
 @interface LBLanguagePrefs : NSObject
 
+/**
+ *Saves the preferred language to the user defaults
+ */
 - (void)saveLanguage:(NSString*)language;
+
+/**
+ *get the last saved language from the user defaults
+ */
 - (NSString*)userLanguage;
 @end
