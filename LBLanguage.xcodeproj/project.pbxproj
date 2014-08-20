@@ -44,7 +44,6 @@
 		5A61C2951935DEBF003B3A64 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5A61C2931935DEBF003B3A64 /* README.md */; };
 		5A61C2971935DF1D003B3A64 /* Screenshot 2014-05-28 12.05.31.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A61C2961935DF1D003B3A64 /* Screenshot 2014-05-28 12.05.31.png */; };
 		5AD11A3419A4A454009ADEFF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A3834421935C6BD00061F02 /* Foundation.framework */; };
-		5AD11A3B19A4A454009ADEFF /* LBLanguage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD11A3A19A4A454009ADEFF /* LBLanguage.m */; };
 		5AD11A4119A4A454009ADEFF /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A3834611935C6BD00061F02 /* XCTest.framework */; };
 		5AD11A4219A4A454009ADEFF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A3834421935C6BD00061F02 /* Foundation.framework */; };
 		5AD11A4319A4A454009ADEFF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A3834461935C6BD00061F02 /* UIKit.framework */; };
@@ -99,7 +98,7 @@
 		5A38344A1935C6BD00061F02 /* LBLanguage-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LBLanguage-Info.plist"; sourceTree = "<group>"; };
 		5A38344C1935C6BD00061F02 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5A38344E1935C6BD00061F02 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5A3834501935C6BD00061F02 /* LanguageChangeApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LanguageChangeApp-Prefix.pch"; sourceTree = "<group>"; };
+		5A3834501935C6BD00061F02 /* LBLanguage-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LBLanguage-Prefix.pch"; sourceTree = "<group>"; };
 		5A3834511935C6BD00061F02 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5A3834521935C6BD00061F02 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5A3834551935C6BD00061F02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -129,9 +128,6 @@
 		5A61C2931935DEBF003B3A64 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = SOURCE_ROOT; };
 		5A61C2961935DF1D003B3A64 /* Screenshot 2014-05-28 12.05.31.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screenshot 2014-05-28 12.05.31.png"; sourceTree = "<group>"; };
 		5AD11A3319A4A454009ADEFF /* libLBLanguage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLBLanguage.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		5AD11A3719A4A454009ADEFF /* LBLanguage-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LBLanguage-Prefix.pch"; sourceTree = "<group>"; };
-		5AD11A3819A4A454009ADEFF /* LBLanguage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LBLanguage.h; sourceTree = "<group>"; };
-		5AD11A3A19A4A454009ADEFF /* LBLanguage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LBLanguage.m; sourceTree = "<group>"; };
 		5AD11A4019A4A454009ADEFF /* LBLanguageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LBLanguageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AD11A4919A4A454009ADEFF /* LBLanguageTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LBLanguageTests-Info.plist"; sourceTree = "<group>"; };
 		5AD11A4B19A4A454009ADEFF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -187,7 +183,6 @@
 				5A3834771935C71400061F02 /* Language */,
 				5A3834481935C6BD00061F02 /* LanguageChangeApp */,
 				5A3834671935C6BD00061F02 /* LanguageChangeAppTests */,
-				5AD11A3519A4A454009ADEFF /* LBLanguage */,
 				5AD11A4719A4A454009ADEFF /* LBLanguageTests */,
 				5A3834411935C6BD00061F02 /* Frameworks */,
 				5A3834401935C6BD00061F02 /* Products */,
@@ -240,7 +235,7 @@
 				5A38344A1935C6BD00061F02 /* LBLanguage-Info.plist */,
 				5A38344B1935C6BD00061F02 /* InfoPlist.strings */,
 				5A38344E1935C6BD00061F02 /* main.m */,
-				5A3834501935C6BD00061F02 /* LanguageChangeApp-Prefix.pch */,
+				5A3834501935C6BD00061F02 /* LBLanguage-Prefix.pch */,
 				5A3834A41935D4C300061F02 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
@@ -273,24 +268,6 @@
 				5A38347C1935C7FA00061F02 /* LBLanguagePrefs.m */,
 			);
 			path = Language;
-			sourceTree = "<group>";
-		};
-		5AD11A3519A4A454009ADEFF /* LBLanguage */ = {
-			isa = PBXGroup;
-			children = (
-				5AD11A3819A4A454009ADEFF /* LBLanguage.h */,
-				5AD11A3A19A4A454009ADEFF /* LBLanguage.m */,
-				5AD11A3619A4A454009ADEFF /* Supporting Files */,
-			);
-			path = LBLanguage;
-			sourceTree = "<group>";
-		};
-		5AD11A3619A4A454009ADEFF /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				5AD11A3719A4A454009ADEFF /* LBLanguage-Prefix.pch */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		5AD11A4719A4A454009ADEFF /* LBLanguageTests */ = {
@@ -530,7 +507,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AD11A3B19A4A454009ADEFF /* LBLanguage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

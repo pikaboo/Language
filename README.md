@@ -10,7 +10,7 @@ Adding this allows changing your App's language on the fly.
 You need to add the Language folder into your files, and add these methods into your app delegate
 
     @interface AppDelegate()
-    @property (nonatomic,strong)Prefs *prefs;
+    @property (nonatomic,strong)LBLanguagePrefs *prefs;
     @end
     @implementation AppDelegate
 
